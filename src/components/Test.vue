@@ -34,6 +34,21 @@
             </div>
         </div>
 
+        <hr>
+
+        <div>
+            <h1>Objetos computados</h1>
+            <p>
+                {{ fullName }}
+            </p>
+        </div>
+
+        <div>
+            <h1>Props</h1>
+            <p>
+                {{ msg }}
+            </p>
+        </div>
     </div>
 </template>
 
@@ -75,6 +90,17 @@
             typedEnter(e){
                 console.log("Se dió enter " + e.target.value)
                 alert(":o Enter!!")
+            }
+        },
+        computed: {
+            fullName(){
+                return this.user.firstName + ' ' + this.user.lastName;
+            }
+        },
+        props : {
+            msg: {
+                type: String,
+                default: "mdj por defecto"
             }
         }
     }

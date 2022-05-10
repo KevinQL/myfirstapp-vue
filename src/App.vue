@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <HelloWorld/>
-    <Test />
+    <Test 
+      msg="My props is a msg" />
   </div>
 </template>
 
